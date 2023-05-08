@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "clang++",
+            "args": [
+                "-std=c++17",
+                "-arch",
+                "arm64",
+                "-I/opt/homebrew/include",
+                "-L/opt/homebrew/lib",
+                "-lSDL2",
+                "-lSDL2_mixer",
+                "${workspaceFolder}/src/*.cpp",
+                "-o",
+                "${workspaceFolder}/rivals"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": "$gcc"
+        }
+    ]
+}
